@@ -1,0 +1,207 @@
+meta:
+  title: Family Meal Planner
+  subtitle: South Indian · Vegetarian · 4-Week Rotation
+  cuisine: South Indian
+  diet: Vegetarian
+  credits:
+    author: Suma
+    note: "Lovingly planned and curated for the all. Thank you, Suma! 🙏"
+
+  changelog:
+    - version: "1.0"
+      date: "2025-03-15"
+      note: "Initial 4-week South Indian vegetarian meal plan"
+
+meal_slots:
+  - key: breakfast
+    label: "Breakfast"
+    time: "7:30 am"
+    emoji: "🌅"
+  - key: snack10
+    label: "10:30 Snack"
+    time: "10:30 am"
+    emoji: "🍎"
+  - key: lunch
+    label: "Lunch"
+    time: "1:00 pm"
+    emoji: "🍱"
+  - key: snack4
+    label: "Evening Snack"
+    time: "4:30 pm"
+    emoji: "☕"
+  - key: dinner
+    label: "Dinner"
+    time: "7:30 pm"
+    emoji: "🌙"
+
+weeks:
+  - week: 1
+    days:
+      - day: Monday
+        breakfast: "Idli (3-4) + Sambar + Coconut Chutney (2-3 Tbsp)"
+        snack10: "Banana"
+        lunch: "Rice + Sambar + Beans Palya + Buttermilk"
+        snack4: "Roasted Makhana"
+        dinner: "Idli + Sambar / Chutney"
+
+      - day: Tuesday
+        breakfast: "Besan Dosa / Cheela (2) + Peanut Chutney (4-6 Tbsp)"
+        snack10: "Guava"
+        lunch: "Kusumbri + Tomato Rice / Peace Pulao + Capsicum Chutney + Buttermilk"
+        snack4: "Boiled Chana Chaat"
+        dinner: "Grilled Paneer + Steamed / Sautéed Vegetables"
+
+      - day: Wednesday
+        breakfast: "Jowar Flour Vegetable Uppittu (1 cup)"
+        snack10: "Papaya"
+        lunch: "Multigrain Chapati + Rajma Curry + Optional Palya + Buttermilk"
+        snack4: "Dhokla"
+        dinner: "Lentil Soup + Sautéed Veggies"
+
+      - day: Thursday
+        breakfast: "Veg Khichadi (1 cup) + Raita"
+        snack10: "Custard Apple"
+        lunch: "Rice + Sambar + Soppina Palya + Buttermilk"
+        snack4: "Steamed Corn Lemon Chaat"
+        dinner: "Lentils Veg Dose + Sambar"
+
+      - day: Friday
+        breakfast: "Mente Dose (2-3) + Chutney"
+        snack10: "Chikoo"
+        lunch: "Ragi Mudde + Sambar + Any Palya + Buttermilk"
+        snack4: "Cucumber / Carrot Sticks + Optional Dip"
+        dinner: "Masala Oats + Added Veggies"
+
+      - day: Saturday
+        breakfast: "Ragi Rotti (added veggies) + Onion Chutney"
+        snack10: "Pomegranate"
+        lunch: "Mente Soppina Chapati / Rotti + Palya + Buttermilk"
+        snack4: "Mixed Nuts and Seeds"
+        dinner: "Moong Dal Kichadi"
+
+      - day: Sunday
+        breakfast: "Moong Dal Sandwich"
+        snack10: "Watermelon"
+        lunch: "Jolada Rotti + Bendekayi Palya + Kalu Palya + Buttermilk"
+        snack4: "Roasted Chana"
+        dinner: "Oats Uppittu"
+
+  - week: 2
+    # Lunch & dinner same as Week 1 — only override breakfast, snack10, snack4
+    inherit_lunch_from: 1
+    inherit_dinner_from: 1
+    days:
+      - day: Monday
+        breakfast: "Ragi Idli + Sambar + Tomato Chutney"
+        snack10: "Muskmelon"
+        snack4: "Veg Bhel Puri"
+
+      - day: Tuesday
+        breakfast: "Moong Dal Dose / Cheela with Stuffed Paneer & Veggies + Green Coconut Chutney"
+        snack10: "Grapes"
+        snack4: "Boiled Peanut Veg Chaat / Sundal"
+
+      - day: Wednesday
+        breakfast: "Millet Veg Uppittu"
+        snack10: "Orange"
+        snack4: "Khakra"
+
+      - day: Thursday
+        breakfast: "Millet Kichadi / Pongal + Sautéed Paneer / Tofu"
+        snack10: "Sweet Lime"
+        snack4: "Ragi Ladu"
+
+      - day: Friday
+        breakfast: "Neer Dose (Palak / Dil / Cucumber) + Sambar / Chutney"
+        snack10: "Apple"
+        snack4: "Sprouted Green Moong Salad / Sundal"
+
+      - day: Saturday
+        breakfast: "Mix Veg + Paneer Stuffed Parata (Multigrain) + Curd"
+        snack10: "Pear"
+        snack4: "Oats and Veg Cutlet"
+
+      - day: Sunday
+        breakfast: "Oats Smoothie + Nuts + Seeds"
+        snack10: "Litchi"
+        snack4: "Sweet Potato + Paneer Tikki"
+
+  - week: 3
+    inherit_lunch_from: 1
+    inherit_dinner_from: 1
+    days:
+      - day: Monday
+        breakfast: "Moong Dal Idli (Veggies) + Green Chutney"
+        snack10: "Jamun"
+        snack4: "Dry Fruits and Seeds Ladu"
+
+      - day: Tuesday
+        breakfast: "Adai Dose + Veg Sambar + Chutney"
+        snack10: "Ber"
+        snack4: "Veg Poha"
+
+      - day: Wednesday
+        breakfast: "Oats Vegetable Uppittu"
+        snack10: "Pineapple"
+        snack4: "Veg Soup"
+
+      - day: Thursday
+        breakfast: "Green Gram Usli"
+        snack10: "Bael"
+        snack4: "Steamed Sweet Potato"
+
+      - day: Friday
+        breakfast: "Uddina Dose (can be stuffed with veggies) + Sambar"
+        snack10: "Mango"
+        snack4: "Ragi Malt"
+
+      - day: Saturday
+        breakfast: "Veg Poha"
+        snack10: "Jackfruit"
+        snack4: "Grilled Paneer + Optional Dip"
+        notes:
+          breakfast: "DON'T pair with Curd"
+
+      - day: Sunday
+        breakfast: "Ragi Ganji + Seeds + Nuts + Ghee"
+        snack10: "Dates"
+        snack4: "Sesame Seed Ladu"
+
+  - week: 4
+    inherit_lunch_from: 1
+    inherit_dinner_from: 1
+    days:
+      - day: Monday
+        breakfast: "Oats Idli (Veggies) + Mint Chutney"
+        snack10: "Starfruit"
+        snack4: "Grilled Tofu"
+
+      - day: Tuesday
+        breakfast: "Green Gram Dose (Pesarattu) + Garlic Chutney"
+        snack10: "Guava"
+        snack4: "Soya Chunks Stir Fry (little masala)"
+
+      - day: Wednesday
+        breakfast: "Veg Ragi / Shavige Uppittu"
+        snack10: "Orange"
+        snack4: "Pop Corn (no oil / very little oil)"
+
+      - day: Thursday
+        breakfast: "Kadle Usli"
+        snack10: "Apple"
+        snack4: "Buttermilk + Roasted Makhana"
+
+      - day: Friday
+        breakfast: "Multi Millet + Grain Dose + Sambar / Chutney"
+        snack10: "Watermelon"
+        snack4: "Beetroot Tikki"
+
+      - day: Saturday
+        breakfast: "Nuchinunde / Veg Akki Unde (Steamed)"
+        snack10: "Pomegranate"
+        snack4: "Stir Fried Mushroom + Optional Veggies"
+
+      - day: Sunday
+        breakfast: "Millet / Buckwheat Pasta"
+        snack10: "Sweet Lime"
+        snack4: "Heerekayi Chutti"
