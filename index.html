@@ -264,6 +264,17 @@
       <div class="section-title">Browse Options</div>
       <p class="section-sub">All options per meal type — pick what's feasible today.</p>
       <div class="meal-type-tabs" id="mealTypeTabs"></div>
+      <div style="margin-bottom:24px;">
+        <input id="searchInput" type="text" placeholder="🔍  Search in this list…"
+          oninput="renderOptions(currentMealType)"
+          style="width:100%;max-width:420px;padding:10px 18px;
+                 border:1.5px solid var(--border);border-radius:50px;
+                 font-family:'DM Sans',sans-serif;font-size:14px;
+                 background:var(--surface);color:var(--text);outline:none;
+                 transition:border-color 0.2s;"
+          onfocus="this.style.borderColor='var(--accent)'"
+          onblur="this.style.borderColor='var(--border)'" />
+      </div>
       <div class="options-grid" id="optionsGrid"></div>
     </div>
     <!-- ABOUT -->
@@ -461,6 +472,7 @@ function selectMealType(key) {
   currentMealType = key;
   document.querySelectorAll('.mt-tab').forEach(b =>
     b.classList.toggle('active', b.dataset.key === key));
+  document.getElementById('searchInput').value = '';
   renderOptions(key);
 }
 
@@ -483,12 +495,22 @@ function renderOptions(key) {
     return true;
   });
 
-  document.getElementById('optionsGrid').innerHTML = unique.map((item, idx) => `
-    <div class="option-card ${key}">
-      <div class="opt-num">${String(idx + 1).padStart(2, '0')}</div>
-      <div class="opt-meal">${item.meal}</div>
-      ${item.note ? `<div class="opt-note"><span>⚠</span>${item.note}</div>` : ''}
-    </div>`).join('');
+  // Apply search filter
+  const query = document.getElementById('searchInput')?.value.trim().toLowerCase() ?? '';
+  const filtered = query
+    ? unique.filter(item =>
+        item.meal.toLowerCase().includes(query) ||
+        (item.note?.toLowerCase().includes(query)))
+    : unique;
+
+  document.getElementById('optionsGrid').innerHTML = filtered.length
+    ? filtered.map((item, idx) => `
+        <div class="option-card ${key}">
+          <div class="opt-num">${String(idx + 1).padStart(2, '0')}</div>
+          <div class="opt-meal">${item.meal}</div>
+          ${item.note ? `<div class="opt-note"><span>⚠</span>${item.note}</div>` : ''}
+        </div>`).join('')
+    : `<p style="color:var(--muted);font-size:14px;padding:8px 0;">No matches for "<strong>${query}</strong>"</p>`;
 }
 
 // ── Render: About ────────────────────────────────────────────
