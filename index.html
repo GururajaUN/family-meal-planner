@@ -359,7 +359,7 @@ function renderTodaySelectors() {
   resolvedWeeks.forEach((w, i) => {
     const opt = document.createElement('option');
     opt.value = i;
-    opt.textContent = `Week ${w.week}`;
+    opt.textContent = `Option ${i + 1}`;
     wSel.appendChild(opt);
   });
 
@@ -409,7 +409,7 @@ function renderWeekButtons() {
             style="${i === 0 ? `background:${WEEK_COLORS[i]};border-color:${WEEK_COLORS[i]};color:white` : ''}"
             onclick="selectWeek(${i})">
       <span class="week-dot" style="background:${i === currentWeek ? 'rgba(255,255,255,0.7)' : WEEK_COLORS[i]}"></span>
-      Week ${w.week}
+      Option ${i + 1}
     </button>`).join('');
 }
 
